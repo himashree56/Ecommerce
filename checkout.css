@@ -1,0 +1,635 @@
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #f5f5f5;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+        color: #333;
+    }
+
+    h1 {
+        font-size: 40px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .back-to-shop {
+        color: #4CAF50;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+    .back-to-shop:hover {
+        color: #45a049;
+    }
+
+    .page-title {
+        padding: 20px 0;
+        font-size: 28px;
+        color: #333;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .auth-buttons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .auth-btn {
+        padding: 8px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        cursor: pointer;
+        border: none;
+        transition: all 0.3s;
+    }
+
+    .signin-btn {
+        background-color: #fff;
+        color: #4CAF50;
+        border: 1px solid #4CAF50;
+    }
+
+    .signin-btn:hover {
+        background-color: #f5f5f5;
+    }
+
+    .signup-btn {
+        background-color: #4CAF50;
+        color: #fff;
+    }
+
+    .signup-btn:hover {
+        background-color: #45a049;
+    }
+
+    .checkout-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+    }
+
+    .cart-items, .order-summary, .auth-form, .loyalty-section {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+
+    .cart-item {
+        display: grid;
+        grid-template-columns: 100px 1fr auto;
+        gap: 15px;
+        padding: 15px 0;
+        border-bottom: 1px solid #eee;
+        align-items: center;
+    }
+
+    .cart-item:last-child {
+        border-bottom: none;
+    }
+
+    .item-image {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .item-details h3 {
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    .item-price {
+        color: #555;
+        font-size: 16px;
+    }
+
+    .item-quantity {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .quantity-btn {
+        width: 30px;
+        height: 30px;
+        background-color: #f1f1f1;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+        transition: background-color 0.3s;
+    }
+
+    .quantity-btn:hover {
+        background-color: #e1e1e1;
+    }
+
+    .quantity-display {
+        font-size: 16px;
+        min-width: 30px;
+        text-align: center;
+    }
+
+    .remove-btn {
+        color: #ff6b6b;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 5px;
+        transition: color 0.3s;
+    }
+
+    .remove-btn:hover {
+        color: #ff4757;
+    }
+
+    .order-summary h2, .auth-form h2, .loyalty-section h2 {
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #eee;
+    }
+
+    .summary-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        color: #555;
+    }
+
+    .discount-row {
+        color: #4CAF50;
+        font-weight: bold;
+    }
+
+    .total-row {
+        font-weight: bold;
+        font-size: 18px;
+        color: #333;
+        margin-top: 10px;
+        padding-top: 15px;
+        border-top: 2px solid #eee;
+    }
+
+    .checkout-btn, .invoice-btn {
+        width: 100%;
+        padding: 15px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        margin-top: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .invoice-btn {
+        background-color: #2196F3;
+        margin-top: 10px;
+    }
+
+    .checkout-btn:hover {
+        background-color: #45a049;
+    }
+
+    .invoice-btn:hover {
+        background-color: #0b7dda;
+    }
+
+    .empty-cart {
+        text-align: center;
+        padding: 50px 20px;
+        color: #777;
+    }
+
+    .empty-cart i {
+        font-size: 48px;
+        margin-bottom: 15px;
+        color: #ddd;
+    }
+
+    .empty-cart .shop-now-btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .empty-cart .shop-now-btn:hover {
+        background-color: #45a049;
+    }
+    .customer-info {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        margin-top: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #444;
+    }
+
+    .form-group input, .form-group select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .coupon-form {
+        display: flex;
+        margin-top: 15px;
+        gap: 10px;
+    }
+
+    .coupon-input {
+        flex-grow: 1;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .apply-btn {
+        padding: 10px 15px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .apply-btn:hover {
+        background-color: #45a049;
+    }
+
+    /* Loyalty points styles */
+    .loyalty-info {
+        background-color: #f9f9f9;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+
+    .points-available {
+        font-size: 18px;
+        font-weight: bold;
+        color: #4CAF50;
+        margin-bottom: 10px;
+    }
+
+    .use-points-form {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .points-input {
+        width: 80px;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    .auth-form {
+        display: none;
+    }
+
+    .auth-form.active {
+        display: block;
+    }
+
+    .form-tabs {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    .form-tab {
+        flex: 1;
+        text-align: center;
+        padding: 10px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+    }
+
+    .form-tab.active {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    .tab-content {
+        display: none;
+    }
+
+    .tab-content.active {
+        display: block;
+    }
+
+    .auth-btn-large {
+        width: 100%;
+        padding: 12px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
+    .user-info {
+        background-color: #f0f8ff;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        border-left: 4px solid #4CAF50;
+    }
+
+    .user-name {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .logout-btn {
+        color: #ff6b6b;
+        background: none;
+        border: none;
+        padding: 0;
+        font-size: 14px;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    .logout-btn:hover {
+        color: #ff4757;
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        overflow: auto;
+    }
+
+    .modal-content {
+        background-color: white;
+        margin: 50px auto;
+        width: 80%;
+        max-width: 800px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        animation: modalFadeIn 0.3s;
+    }
+
+    @keyframes modalFadeIn {
+        from {opacity: 0; transform: translateY(-50px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+
+    .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .close-btn {
+        font-size: 28px;
+        font-weight: bold;
+        color: #777;
+        cursor: pointer;
+    }
+
+    .modal-body {
+        padding: 20px;
+    }
+
+    .invoice {
+        padding: 20px;
+    }
+
+    .invoice-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+
+    .company-info {
+        max-width: 50%;
+    }
+
+    .company-name {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .invoice-details {
+        text-align: right;
+    }
+
+    .invoice-id {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .invoice-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+    }
+
+    .invoice-table th, .invoice-table td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+    }
+
+    .invoice-table th {
+        background-color: #f9f9f9;
+    }
+
+    .invoice-totals {
+        margin-top: 20px;
+        text-align: right;
+    }
+
+    .invoice-total-row {
+        margin: 5px 0;
+    }
+
+    .grand-total {
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .invoice-footer {
+        margin-top: 40px;
+        text-align: center;
+        color: #777;
+        font-size: 14px;
+    }
+
+    .print-btn {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .print-btn:hover {
+        background-color: #45a049;
+    }
+    @media screen and (max-width: 768px) {
+        .checkout-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        h1 {
+            font-size: 30px;
+        }
+
+        .form-row {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+
+        .page-title {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .auth-buttons {
+            width: 100%;
+        }
+
+        .auth-btn {
+            flex: 1;
+        }
+
+        .modal-content {
+            width: 95%;
+            margin: 20px auto;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .cart-item {
+            grid-template-columns: 70px 1fr;
+            grid-template-areas: 
+                "image details"
+                "image quantity";
+        }
+
+        .item-image {
+            grid-area: image;
+            width: 60px;
+            height: 60px;
+        }
+
+        .item-details {
+            grid-area: details;
+        }
+
+        .item-quantity {
+            grid-area: quantity;
+            margin-top: 10px;
+        }
+        
+        h1 {
+            font-size: 24px;
+        }
+
+        .coupon-form {
+            flex-direction: column;
+        }
+    }
+
+    @media print {
+        body * {
+            visibility: hidden;
+        }
+        .modal-content, .modal-content * {
+            visibility: visible;
+        }
+        .modal-content {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            margin: 0;
+            padding: 15px;
+            box-shadow: none;
+        }
+        .print-btn, .close-btn {
+            display: none;
+        }
+    }

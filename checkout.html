@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - E-Commerce Store</title>
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>E-Commerce Store</h1>
+        <a href="ecommerce.html" class="back-to-shop">
+            <i class="fas fa-arrow-left"></i> Back to Shop
+        </a>
+    </header>
+
+    <div class="container">
+        <div class="page-title">
+            <h2>Your Shopping Cart</h2>
+            <div class="auth-buttons" id="authButtonsContainer">
+                <button class="auth-btn signin-btn" onclick="showAuthForm('signin')">Sign In</button>
+                <button class="auth-btn signup-btn" onclick="showAuthForm('signup')">Sign Up</button>
+            </div>
+        </div>
+        <div class="auth-form" id="authForm">
+            <div class="form-tabs">
+                <div class="form-tab" id="signinTab" onclick="switchTab('signin')">Sign In</div>
+                <div class="form-tab" id="signupTab" onclick="switchTab('signup')">Sign Up</div>
+            </div>
+            
+            <div class="tab-content" id="signinContent">
+                <div class="form-group">
+                    <label for="signin-email">Email</label>
+                    <input type="email" id="signin-email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="signin-password">Password</label>
+                    <input type="password" id="signin-password" placeholder="Enter your password">
+                </div>
+                <button class="auth-btn-large" onclick="signIn()">Sign In</button>
+            </div>
+            
+            <div class="tab-content" id="signupContent">
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" placeholder="Create a password">
+                </div>
+                <button class="auth-btn-large" onclick="signUp()">Sign Up</button>
+            </div>
+        </div>
+        
+        <div id="checkout-content">
+        </div>
+    </div>
+    <div id="invoiceModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Invoice</h2>
+                <span class="close-btn" onclick="closeInvoice()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="invoiceContent">
+                </div>
+                <button class="print-btn" onclick="window.print()">Print Invoice</button>
+            </div>
+        </div>
+    </div>
+    <script src="./checkout.js"></script>
+  </body> 
+</html>
