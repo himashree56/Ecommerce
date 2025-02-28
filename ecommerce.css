@@ -99,22 +99,23 @@ img{
     .typing {
         font-size: 10px;
         font-weight: 500;
-        transform:scaleY(3);
+        transform:scaleY(3.5);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 }
 @media screen and (max-width: 600px) {
     .typing {
-        font-size: 5px;
+        font-size: 10px;
         font-weight: 500;
-        transform: scaleY(3);
+        transform: scaleY(3.5);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 }
 @media screen and (max-width: 480px) {
     .typing {
-        font-size: 5px;
+        font-size: 10px;
         font-weight: 500;
+        transform: scaleY(3.5);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 }
