@@ -81,7 +81,7 @@ img{
     overflow: hidden;
     white-space: wrap;
     border-right: 2px solid #000; 
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: bold;
     font-family:Georgia, 'Times New Roman', Times, serif;
     animation: typing 1s steps(20, end)forwards , blink 0.5s infinite;
@@ -89,7 +89,7 @@ img{
 
 @keyframes typing {
     from { width: 0; }
-    to { width: 57%; }
+    to { width: 60%; }
 }
 
 @keyframes blink {
@@ -97,17 +97,17 @@ img{
 }
 @media screen and (max-width: 768px) {
     .typing {
-        font-size: 1.5rem;
+        font-size: 50px;
     }
 }
 @media screen and (max-width: 600px) {
     .typing {
-        font-size: 1rem;
+        font-size: 50px;
     }
 }
 @media screen and (max-width: 480px) {
     .typing {
-        font-size: 1.2rem;
+        font-size: 50px
     }
 }
 .cart-icon {
