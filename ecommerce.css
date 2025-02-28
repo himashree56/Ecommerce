@@ -204,6 +204,18 @@ img{
     align-items: center;
     gap: 10px;
 }
+@media screen and (max-width: 768px) {
+    .view-cart-btn {
+        gap: 8px; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .view-cart-btn {
+        gap: 5px; 
+    }
+}
+
 
 .view-cart-btn:hover {
     background-color: #45a049;
