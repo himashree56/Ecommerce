@@ -32,22 +32,22 @@ h1 {
 
 @media screen and (max-width: 768px) {
     h1 {
-        font-size: 30px;
+        font-size: 5px;
         padding: 10px;
     }
 }
 
 @media screen and (max-width: 480px) {
     h1 {
-        font-size: 24px;
+        font-size: 5px;
         padding: 5px;
     }
 }
 
 @media screen and (max-width: 600px) {
     h1 {
-        font-size: 28px; 
-        padding: 8px;  
+        font-size: 10px; 
+        padding: 5px;  
         text-align: center; 
         word-break: break-word;
         white-space: normal; 
