@@ -177,7 +177,7 @@ function displayCartItems(container) {
         
         cartItemsHTML += `
             <div class="cart-item">
-                <img src="${item.item_image}" alt="${item.item_name}" class="item-image" onerror="this.src='https://via.placeholder.com/80x80'">
+                <img src="${item.item_image}" alt="${item.item_name}" class="item-image" onerror="this.src='https://via.placeholder.com/80x80'" >
                 <div class="item-details">
                     <h3>${item.item_name}</h3>
                     <p class="item-price">$${item.item_price.toFixed(2)} each</p>
@@ -490,4 +490,9 @@ window.addEventListener('click', function(event) {
     if (event.target === modal) {
     closeInvoice();
 }
+});
+window.addEventListener("pageshow", function (event) {
+    if (event.persisted) {
+        location.reload();
+    }
 });

@@ -1,22 +1,26 @@
 
-    * {
+* {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
 
-    body {
+body {
         background-color: #f5f5f5;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
+img{
+        margin-right: 10px;
+        margin-left: 40px;
+    }
 
-    .container {
+.container {
         max-width: 1200px;
         margin: 0 auto;
         padding: 20px;
     }
 
-    header {
+header {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -25,16 +29,16 @@
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
-    h1, h2 {
+h1, h2 {
         color: #333;
     }
 
-    h1 {
+h1 {
         font-size: 40px;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-    .back-to-shop {
+.back-to-shop {
         color: #4CAF50;
         text-decoration: none;
         display: flex;
@@ -44,11 +48,11 @@
         transition: color 0.3s;
     }
 
-    .back-to-shop:hover {
+.back-to-shop:hover {
         color: #45a049;
     }
 
-    .page-title {
+.page-title {
         padding: 20px 0;
         font-size: 28px;
         color: #333;
@@ -58,12 +62,12 @@
         align-items: center;
     }
 
-    .auth-buttons {
+.auth-buttons {
         display: flex;
         gap: 10px;
     }
 
-    .auth-btn {
+.auth-btn {
         padding: 8px 15px;
         border-radius: 5px;
         font-size: 14px;
@@ -72,32 +76,32 @@
         transition: all 0.3s;
     }
 
-    .signin-btn {
+.signin-btn {
         background-color: #fff;
         color: #4CAF50;
         border: 1px solid #4CAF50;
     }
 
-    .signin-btn:hover {
+.signin-btn:hover {
         background-color: #f5f5f5;
     }
 
-    .signup-btn {
+.signup-btn {
         background-color: #4CAF50;
         color: #fff;
     }
 
-    .signup-btn:hover {
+.signup-btn:hover {
         background-color: #45a049;
     }
 
-    .checkout-grid {
+.checkout-grid {
         display: grid;
         grid-template-columns: 2fr 1fr;
         gap: 20px;
     }
 
-    .cart-items, .order-summary, .auth-form, .loyalty-section {
+.cart-items, .order-summary, .auth-form, .loyalty-section {
         background: white;
         border-radius: 10px;
         padding: 20px;
@@ -105,7 +109,7 @@
         margin-bottom: 20px;
     }
 
-    .cart-item {
+.cart-item {
         display: grid;
         grid-template-columns: 100px 1fr auto;
         gap: 15px;
@@ -114,34 +118,37 @@
         align-items: center;
     }
 
-    .cart-item:last-child {
+.cart-item:last-child {
         border-bottom: none;
     }
 
-    .item-image {
+.item-image {
         width: 80px;
         height: 80px;
         object-fit: cover;
         border-radius: 8px;
+        margin-right: 100px;
     }
 
-    .item-details h3 {
+.item-details h3 {
         margin-bottom: 5px;
         color: #333;
+        margin-left: 15px;
     }
 
-    .item-price {
+.item-price {
         color: #555;
         font-size: 16px;
+        margin-left: 15px;
     }
 
-    .item-quantity {
+.item-quantity {
         display: flex;
         align-items: center;
         gap: 10px;
     }
 
-    .quantity-btn {
+.quantity-btn {
         width: 30px;
         height: 30px;
         background-color: #f1f1f1;
@@ -153,17 +160,17 @@
         transition: background-color 0.3s;
     }
 
-    .quantity-btn:hover {
+.quantity-btn:hover {
         background-color: #e1e1e1;
     }
 
-    .quantity-display {
+.quantity-display {
         font-size: 16px;
         min-width: 30px;
         text-align: center;
     }
 
-    .remove-btn {
+.remove-btn {
         color: #ff6b6b;
         background: none;
         border: none;
@@ -172,32 +179,33 @@
         font-size: 14px;
         font-weight: bold;
         margin-top: 5px;
+        margin-left: 15px;
         transition: color 0.3s;
     }
 
-    .remove-btn:hover {
+.remove-btn:hover {
         color: #ff4757;
     }
 
-    .order-summary h2, .auth-form h2, .loyalty-section h2 {
+.order-summary h2, .auth-form h2, .loyalty-section h2 {
         margin-bottom: 20px;
         padding-bottom: 10px;
         border-bottom: 2px solid #eee;
     }
 
-    .summary-row {
+.summary-row {
         display: flex;
         justify-content: space-between;
         padding: 10px 0;
         color: #555;
     }
 
-    .discount-row {
+.discount-row {
         color: #4CAF50;
         font-weight: bold;
     }
 
-    .total-row {
+.total-row {
         font-weight: bold;
         font-size: 18px;
         color: #333;
@@ -206,7 +214,7 @@
         border-top: 2px solid #eee;
     }
 
-    .checkout-btn, .invoice-btn {
+.checkout-btn, .invoice-btn {
         width: 100%;
         padding: 15px;
         background-color: #4CAF50;
@@ -219,16 +227,16 @@
         transition: background-color 0.3s ease;
     }
 
-    .invoice-btn {
+.invoice-btn {
         background-color: #2196F3;
         margin-top: 10px;
     }
 
-    .checkout-btn:hover {
+.checkout-btn:hover {
         background-color: #45a049;
     }
 
-    .invoice-btn:hover {
+.invoice-btn:hover {
         background-color: #0b7dda;
     }
 
@@ -238,13 +246,13 @@
         color: #777;
     }
 
-    .empty-cart i {
+.empty-cart i {
         font-size: 48px;
         margin-bottom: 15px;
         color: #ddd;
     }
 
-    .empty-cart .shop-now-btn {
+.empty-cart .shop-now-btn {
         display: inline-block;
         margin-top: 20px;
         padding: 10px 20px;
@@ -255,10 +263,10 @@
         transition: background-color 0.3s;
     }
 
-    .empty-cart .shop-now-btn:hover {
+.empty-cart .shop-now-btn:hover {
         background-color: #45a049;
     }
-    .customer-info {
+.customer-info {
         background: white;
         border-radius: 10px;
         padding: 20px;
@@ -266,18 +274,18 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    .form-group {
+.form-group {
         margin-bottom: 15px;
     }
 
-    .form-group label {
+.form-group label {
         display: block;
         margin-bottom: 5px;
         font-weight: bold;
         color: #444;
     }
 
-    .form-group input, .form-group select {
+.form-group input, .form-group select {
         width: 100%;
         padding: 10px;
         border: 1px solid #ddd;
@@ -285,19 +293,19 @@
         font-size: 16px;
     }
 
-    .form-row {
+.form-row {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 15px;
     }
 
-    .coupon-form {
+.coupon-form {
         display: flex;
         margin-top: 15px;
         gap: 10px;
     }
 
-    .coupon-input {
+.coupon-input {
         flex-grow: 1;
         padding: 10px;
         border: 1px solid #ddd;
@@ -305,7 +313,7 @@
         font-size: 16px;
     }
 
-    .apply-btn {
+.apply-btn {
         padding: 10px 15px;
         background-color: #4CAF50;
         color: white;
@@ -315,52 +323,52 @@
         transition: background-color 0.3s;
     }
 
-    .apply-btn:hover {
+.apply-btn:hover {
         background-color: #45a049;
     }
 
-    /* Loyalty points styles */
-    .loyalty-info {
+
+.loyalty-info {
         background-color: #f9f9f9;
         padding: 15px;
         border-radius: 8px;
         margin-bottom: 15px;
     }
 
-    .points-available {
+.points-available {
         font-size: 18px;
         font-weight: bold;
         color: #4CAF50;
         margin-bottom: 10px;
     }
 
-    .use-points-form {
+.use-points-form {
         display: flex;
         gap: 10px;
         align-items: center;
         margin-top: 10px;
     }
 
-    .points-input {
+.points-input {
         width: 80px;
         padding: 8px;
         border: 1px solid #ddd;
         border-radius: 5px;
     }
-    .auth-form {
+.auth-form {
         display: none;
     }
 
-    .auth-form.active {
+.auth-form.active {
         display: block;
     }
 
-    .form-tabs {
+.form-tabs {
         display: flex;
         margin-bottom: 20px;
     }
 
-    .form-tab {
+.form-tab {
         flex: 1;
         text-align: center;
         padding: 10px;
@@ -368,20 +376,20 @@
         cursor: pointer;
     }
 
-    .form-tab.active {
+.form-tab.active {
         background-color: #4CAF50;
         color: white;
     }
 
-    .tab-content {
+.tab-content {
         display: none;
     }
 
-    .tab-content.active {
+.tab-content.active {
         display: block;
     }
 
-    .auth-btn-large {
+.auth-btn-large {
         width: 100%;
         padding: 12px;
         background-color: #4CAF50;
@@ -393,7 +401,7 @@
         margin-top: 15px;
     }
 
-    .user-info {
+.user-info {
         background-color: #f0f8ff;
         padding: 15px;
         border-radius: 8px;
@@ -401,12 +409,12 @@
         border-left: 4px solid #4CAF50;
     }
 
-    .user-name {
+.user-name {
         font-weight: bold;
         margin-bottom: 5px;
     }
 
-    .logout-btn {
+.logout-btn {
         color: #ff6b6b;
         background: none;
         border: none;
@@ -416,10 +424,10 @@
         text-decoration: underline;
     }
 
-    .logout-btn:hover {
+.logout-btn:hover {
         color: #ff4757;
     }
-    .modal {
+.modal {
         display: none;
         position: fixed;
         z-index: 1000;
@@ -431,7 +439,7 @@
         overflow: auto;
     }
 
-    .modal-content {
+.modal-content {
         background-color: white;
         margin: 50px auto;
         width: 80%;
@@ -441,12 +449,12 @@
         animation: modalFadeIn 0.3s;
     }
 
-    @keyframes modalFadeIn {
+@keyframes modalFadeIn {
         from {opacity: 0; transform: translateY(-50px);}
         to {opacity: 1; transform: translateY(0);}
     }
 
-    .modal-header {
+.modal-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -454,86 +462,86 @@
         border-bottom: 1px solid #eee;
     }
 
-    .close-btn {
+.close-btn {
         font-size: 28px;
         font-weight: bold;
         color: #777;
         cursor: pointer;
     }
 
-    .modal-body {
+.modal-body {
         padding: 20px;
     }
 
-    .invoice {
+.invoice {
         padding: 20px;
     }
 
-    .invoice-header {
+.invoice-header {
         display: flex;
         justify-content: space-between;
         margin-bottom: 30px;
     }
 
-    .company-info {
+.company-info {
         max-width: 50%;
     }
 
-    .company-name {
+.company-name {
         font-size: 24px;
         font-weight: bold;
         margin-bottom: 5px;
     }
 
-    .invoice-details {
+.invoice-details {
         text-align: right;
     }
 
-    .invoice-id {
+.invoice-id {
         font-weight: bold;
         font-size: 18px;
         margin-bottom: 5px;
     }
 
-    .invoice-table {
+.invoice-table {
         width: 100%;
         border-collapse: collapse;
         margin: 20px 0;
     }
 
-    .invoice-table th, .invoice-table td {
+.invoice-table th, .invoice-table td {
         padding: 10px;
         text-align: left;
         border-bottom: 1px solid #eee;
     }
 
-    .invoice-table th {
+.invoice-table th {
         background-color: #f9f9f9;
     }
 
-    .invoice-totals {
+.invoice-totals {
         margin-top: 20px;
         text-align: right;
     }
 
-    .invoice-total-row {
+.invoice-total-row {
         margin: 5px 0;
     }
 
-    .grand-total {
+.grand-total {
         font-weight: bold;
         font-size: 18px;
         margin-top: 10px;
     }
 
-    .invoice-footer {
+.invoice-footer {
         margin-top: 40px;
         text-align: center;
         color: #777;
         font-size: 14px;
     }
 
-    .print-btn {
+.print-btn {
         background-color: #4CAF50;
         color: white;
         border: none;
@@ -547,7 +555,7 @@
     .print-btn:hover {
         background-color: #45a049;
     }
-    @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
         .checkout-grid {
             grid-template-columns: 1fr;
         }
@@ -581,7 +589,7 @@
         }
     }
 
-    @media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
         .cart-item {
             grid-template-columns: 70px 1fr;
             grid-template-areas: 
@@ -633,3 +641,12 @@
             display: none;
         }
     }
+.footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position: relative;
+        width: 100%;
+    }
+    

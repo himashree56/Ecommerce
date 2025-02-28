@@ -6,21 +6,30 @@ let categories = [];
 if (!localStorage.getItem('itemCart')) {
             localStorage.setItem('itemCart', JSON.stringify([]));
         }
-       
-function fetchMenu() {
-    fetch("https://api.npoint.io/1cf1f2a7c23660eb1842")
+async function fetchMenu() {
+
+    document.getElementById("loading-spinner").classList.remove("hidden");
+    document.getElementById("menu-sections").classList.add("hidden");
+
+    fetch("https://api.npoint.io/1cf1f2a7c23660eb1842?t=")
         .then(response => response.json())
         .then(data => {
             itemData = data;
-            initializeStore(); 
+            initializeStore();
+            document.querySelector(".footer").style.display = "block";
         })
         .catch(error => {
             console.error("Error fetching data:", error);
+        })
+        .finally(() => {
+            document.getElementById("loading-spinner").classList.add("hidden");
+            document.getElementById("menu-sections").classList.remove("hidden");
         });
 }
+
 document.addEventListener("DOMContentLoaded", fetchMenu);
                     
-        function initializeStore() {
+function initializeStore() {
             const categorySet = new Set();
             itemData.forEach(item => {
                 if (item.item_category) {
@@ -34,7 +43,7 @@ document.addEventListener("DOMContentLoaded", fetchMenu);
             updateCartCount();
         }
 
-        function createCategoryNav() {
+function createCategoryNav() {
             const nav = document.getElementById('category-nav');
             categories.forEach(category => {
                 const categoryId = category.toLowerCase().replace(/\s+/g, '-');
@@ -72,7 +81,7 @@ document.addEventListener("DOMContentLoaded", fetchMenu);
             });
         }
 
-        function displayItemsByCategory() {
+function displayItemsByCategory() {
             const menuContainer = document.getElementById('menu-sections');
             let sectionsHTML = '';
             sectionsHTML += `
@@ -100,7 +109,7 @@ document.addEventListener("DOMContentLoaded", fetchMenu);
             menuContainer.innerHTML = sectionsHTML;
         }
 
-        function generateItemCards(items) {
+function generateItemCards(items) {
             if (items.length === 0) {
                 return '<p>No items available in this category.</p>';
             }
@@ -121,7 +130,7 @@ document.addEventListener("DOMContentLoaded", fetchMenu);
             return cardsHTML;
         }
 
-        function addToCart(item_id) {
+function addToCart(item_id) {
             const item = itemData.find(item => item.item_id === item_id);
             if (item) {
                 let cart = JSON.parse(localStorage.getItem('itemCart'));
@@ -140,7 +149,7 @@ document.addEventListener("DOMContentLoaded", fetchMenu);
             }
         }
 
-        function showAddedToCartFeedback(itemName) {
+function showAddedToCartFeedback(itemName) {
             const feedback = document.createElement('div');
             feedback.textContent = `${itemName} added to cart!`;
             feedback.style.position = 'fixed';
@@ -168,14 +177,14 @@ document.addEventListener("DOMContentLoaded", fetchMenu);
             }, 2000);
         }
 
-        function updateCartCount() {
+function updateCartCount() {
             const cart = JSON.parse(localStorage.getItem('itemCart'));
             const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
             document.getElementById('cart-count').textContent = totalItems;
             document.getElementById('floating-cart-count').textContent = totalItems;
         }
 
-        function goToCheckout() {
+function goToCheckout() {
             window.location.href = 'checkout.html';
         }
 
