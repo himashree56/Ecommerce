@@ -102,7 +102,7 @@ img{
 }
 @media screen and (max-width: 600px) {
     .typing {
-        font-size: 1.35rem;
+        font-size: 1rem;
     }
 }
 @media screen and (max-width: 480px) {
