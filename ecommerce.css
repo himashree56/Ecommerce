@@ -39,6 +39,7 @@ img{
         flex-direction: column;
         text-align: center;
         padding: 10px;
+        font-size: 5px;
     }
 
     img {
@@ -232,15 +233,17 @@ img{
     align-items: center;
     gap: 10px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
     .view-cart-btn {
-        gap: 8px; 
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .view-cart-btn {
-        gap: 5px; 
+        width: 70%; 
+        left: 15%;  
+        right: 15%;
+        bottom: 15px;
+        text-align: center;
+        justify-content: center;
+        gap: 5px;
+        padding: 14px;
+        font-size: 16px;
     }
 }
 
