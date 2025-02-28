@@ -100,8 +100,6 @@ img{
         font-size: 10px;
         font-weight: 500;
         transform:scaleY(3);
-        white-space: nowrap;
-        display: inline-block;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 }
@@ -110,7 +108,6 @@ img{
         font-size: 5px;
         font-weight: 500;
         transform: scaleY(3);
-        white-space: nowrap;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 }
@@ -118,7 +115,6 @@ img{
     .typing {
         font-size: 5px;
         font-weight: 500;
-        white-space: nowrap;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 }
