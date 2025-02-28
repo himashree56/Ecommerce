@@ -23,7 +23,7 @@ h1 {
     font-size: 40px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-left: 5px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -79,7 +79,7 @@ img{
 .typing {
     width: 0;
     overflow: hidden;
-    white-space: nowrap;
+    white-space: wrap;
     border-right: 2px solid #000; 
     font-size: 2rem;
     font-weight: bold;
