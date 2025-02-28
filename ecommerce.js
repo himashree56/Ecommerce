@@ -113,7 +113,7 @@ function searchItems() {
             const query = document.getElementById('search-input').value.toLowerCase();
             const filteredItems = itemData.filter(item => item.item_name.toLowerCase().includes(query));
             
-            displayItemsByCategory(filteredItems); // Pass the filtered items to display
+            displayItemsByCategory(filteredItems);
         }
 function generateItemCards(items) {
             if (items.length === 0) {
