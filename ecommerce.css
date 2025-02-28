@@ -97,16 +97,16 @@ img{
 }
 @media screen and (max-width: 768px) {
     .typing {
-        font-size: 0.8rem;
+        font-size: 10px;
         font-weight: 500;
-        transform: scaleY(3);
+        transform:scaleY(3);
         white-space: nowrap;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 }
 @media screen and (max-width: 600px) {
     .typing {
-        font-size: 0.6rem;
+        font-size: 5px;
         font-weight: 500;
         transform: scaleY(3);
         white-space: nowrap;
@@ -115,7 +115,7 @@ img{
 }
 @media screen and (max-width: 480px) {
     .typing {
-        font-size: 0.2rem;
+        font-size: 5px;
         font-weight: 500;
         transform: scaleY(3);
         white-space: nowrap;
