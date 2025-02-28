@@ -49,8 +49,8 @@ h1 {
     }
 @media (max-width: 600px) {
         .back-to-shop {
-            padding: 10px 20px;
-            font-size: 14px;
+            flex-direction: column;
+            align-items: flex-start;
         }
     }
 
