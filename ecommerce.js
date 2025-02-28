@@ -80,15 +80,14 @@ function createCategoryNav() {
                 });
             });
         }
-
-function displayItemsByCategory() {
+function displayItemsByCategory(items = itemData) {
             const menuContainer = document.getElementById('menu-sections');
             let sectionsHTML = '';
             sectionsHTML += `
                 <div id="all" class="item-section">
                     <h2 class="section-title">All Items</h2>
                     <div id="all-items" class="itemcards">
-                        ${generateItemCards(itemData)}
+                        ${generateItemCards(items)}
                     </div>
                 </div>
             `;
@@ -108,7 +107,14 @@ function displayItemsByCategory() {
             
             menuContainer.innerHTML = sectionsHTML;
         }
+document.getElementById('search-button').addEventListener('click', searchItems);
 
+function searchItems() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const filteredItems = itemData.filter(item => item.item_name.toLowerCase().includes(query));
+            
+            displayItemsByCategory(filteredItems); // Pass the filtered items to display
+        }
 function generateItemCards(items) {
             if (items.length === 0) {
                 return '<p>No items available in this category.</p>';
