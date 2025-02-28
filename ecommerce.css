@@ -89,7 +89,7 @@ img{
 
 @keyframes typing {
     from { width: 0; }
-    to { width: 40%; }
+    to { width: 43%; }
 }
 
 @keyframes blink {
@@ -110,7 +110,6 @@ img{
         font-size: 5px;
         font-weight: 500;
         transform: scaleY(3);
-        display: inline-block;
         white-space: nowrap;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
@@ -119,7 +118,6 @@ img{
     .typing {
         font-size: 5px;
         font-weight: 500;
-        display: inline-block;
         white-space: nowrap;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
