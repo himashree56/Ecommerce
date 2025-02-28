@@ -79,9 +79,9 @@ img{
 .typing {
     width: 0;
     overflow: hidden;
-    white-space: wrap;
+    white-space: nowrap;
     border-right: 2px solid #000; 
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
     font-family:Georgia, 'Times New Roman', Times, serif;
     animation: typing 1s steps(20, end)forwards , blink 0.5s infinite;
@@ -89,7 +89,7 @@ img{
 
 @keyframes typing {
     from { width: 0; }
-    to { width: 60%; }
+    to { width: 40%; }
 }
 
 @keyframes blink {
@@ -97,17 +97,29 @@ img{
 }
 @media screen and (max-width: 768px) {
     .typing {
-        font-size: 50px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        transform: scaleY(3);
+        white-space: nowrap;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 }
 @media screen and (max-width: 600px) {
     .typing {
-        font-size: 50px;
+        font-size: 0.6rem;
+        font-weight: 500;
+        transform: scaleY(3);
+        white-space: nowrap;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 }
 @media screen and (max-width: 480px) {
     .typing {
-        font-size: 50px
+        font-size: 0.2rem;
+        font-weight: 500;
+        transform: scaleY(3);
+        white-space: nowrap;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 }
 .cart-icon {
