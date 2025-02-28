@@ -427,11 +427,10 @@ invoiceContent.innerHTML = `
 <div class="invoice">
     <div class="invoice-header">
         <div class="company-info">
-            <div class="company-name">E-Commerce Store</div>
-            <div>123 Main Street</div>
-            <div>Anytown, USA 12345</div>
-            <div>Phone: (123) 456-7890</div>
-            <div>Email: info@ecommercestore.com</div>
+            <div class="company-name">TECHZWONE E-Commerce Store</div>
+            <div>Bangalore, India 560075</div>
+            <div>Phone: +91 7022989390</div>
+            <div>Email: info@TECHZWONE.com</div>
         </div>
         <div class="invoice-details">
             <div class="invoice-id">Invoice #: INV-${Date.now().toString().substring(5)}</div>
